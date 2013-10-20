@@ -14,9 +14,19 @@ def order():
     return render_template('order.html')
 
 
+@app.route('/customize')
+def customize():
+    return render_template('customize.html')
+
+
 @app.route('/thanks')
 def thanks():
     return render_template('thanks.html')
+
+
+@app.route('/register')
+def register():
+    return render_template('register.html')
 
 
 if __name__ == '__main__':
