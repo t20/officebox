@@ -1,0 +1,7 @@
+Flask
+Flask-Admin
+Jinja2
+Werkzeug
+redis==2.6.0
+redisco==0.1.4
+
