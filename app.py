@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
 from scripts.tmforum import get_product, create_order
@@ -19,12 +19,21 @@ def order():
         return render_template('order.html')
     # POST form submission
     tmforum_response = create_order(params)
-    return redirect(url_for('thanks'))
+    return redirect(url_for('shipment'))
 
 
 @app.route('/customize')
 def customize():
     return render_template('customize.html')
+
+
+@app.route('/shipment', methods=['GET', 'POST'])
+def shipment():
+    print 'request.method', request.method
+    if request.method == 'GET':
+        return render_template('shipment.html')
+    else:
+        return redirect(url_for('thanks'))
 
 
 @app.route('/thanks')
