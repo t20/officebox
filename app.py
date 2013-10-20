@@ -3,7 +3,7 @@ import os
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
-from tmforum import get_product, create_order
+from scripts.tmforum import get_product, create_order
 
 @app.route('/')
 def index():
