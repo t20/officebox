@@ -1,1 +1,54 @@
-<html></html>
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="bs-example">
+        <div class="well well-sm">
+          <h1></h1>
+
+        <form class="bs-example form-horizontal" action="/order">
+          <fieldset>
+            <div class="form-group">
+              <label for="select" class="col-lg-2 control-label">Number of employees</label>
+              <div class="col-lg-10">
+               <select class="form-control" id="select">
+                  <option>0-30</option>
+                  <option>30-100</option>
+                  <option>100-500</option>
+                  <option>500-1000+</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 control-label">Company's Stage</label>
+              <div class="col-lg-10">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-success">Startup</button>
+                  <button type="button" class="btn btn-success">Medium-size</button>
+                  <button type="button" class="btn btn-success">VC Funded</button>
+                  <button type="button" class="btn btn-success">Enterprise</button>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-lg-10 col-lg-offset-2">
+               <input type="submit" class="btn btn-danger" value="Get an offer"/>
+
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="panel panel-default">
+          <div class="panel-heading"></div>
+            <div class="panel-body"></div>
+      </div>
+        </div>
+      </div>
+      </div>
+{% endblock %}

@@ -1,1 +1,117 @@
-<html></html>
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <div class="page-header" id="banner">
+      <div class="row">
+        <div class="col-lg-6">
+            <p class="lead">Order Summary:</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-group">
+  <a href="#" class="list-group-item active">Your bundle</a>
+  <a href="#" class="list-group-item">Chair<span class="badge">$39.99</span></a>
+  <a href="#" class="list-group-item">Table<span class="badge">$59.99</span></a>
+  <a href="#" class="list-group-item">Pen<span class="badge">$5.99</span></a>
+  <a href="#" class="list-group-item">Paper Stack<span class="badge">$19.99</span></a>
+  <a href="#" class="list-group-item">ATT Wireless<span class="badge">$$29.99</span></a>
+  <a href="#" class="list-group-item active">Total: <strong>$145</strong>
+     </a>
+</div>
+
+    <div class="page-header" id="banner">
+      <div class="row">
+        <div class="col-lg-6">
+            <p class="lead">Complete your payment:</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-11">
+      <div class="well">
+          <form class="bs-example form-horizontal">
+            <fieldset>
+             <legend>Payment</legend>
+              <div class="form-group">
+                  <label for="inputEmail" class="col-lg-4 control-label">Card Holder's Name</label>
+                <div class="col-lg-8">
+                 <input type="text" class="form-control" id="inputEmail" placeholder="Name" style="width:180px;">
+                </div>
+              </div>
+              <div class="form-group">
+                  <label for="inputEmail" class="col-lg-4 control-label">Card Number</label>
+                <div class="col-lg-2">
+                  <input type="text" class="form-control" id="inputEmail" placeholder="XXXX-XXXX-XXXX-XXXX" style="width:180px;">
+                </div>
+              </div>
+               <div class="form-group">
+                  <label for="inputEmail" class="col-lg-4 control-label">Card Expiry Date</label>
+                  <div class="col-lg-8">
+                    <select class="form-control" id="select" style="width:200px;">
+                      <option>January</option>
+                      <option>...</option>
+                      <option>December</option>
+                    </select>
+                    <select class="form-control" id="select" style="width:200px;">
+                      <option>2013</option>
+                      <option>...</option>
+                      <option>2015</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail" class="col-lg-4 control-label">Card CVV</label>
+                <div class="col-lg-3">
+                  <input type="text" class="form-control" id="inputEmail" placeholder="XXX">
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+    </div>
+
+    <div class="col-lg-11">
+      <div class="well">
+          <form class="bs-example form-horizontal">
+            <fieldset>
+             <legend>Shipping Address</legend>
+              <div class="form-group">
+                  <label for="inputEmail" class="col-lg-4 control-label">Name</label>
+                <div class="col-lg-8">
+                 <input type="text" class="form-control" id="inputEmail" placeholder="Name" >
+                </div>
+              </div>
+              <div class="form-group">
+                  <label for="inputEmail" class="col-lg-4 control-label">Email</label>
+                <div class="col-lg-2">
+                  <input type="text" class="form-control" id="inputEmail" placeholder="email">
+                </div>
+              </div>
+               <div class="form-group">
+                  <label for="inputEmail" class="col-lg-4 control-label">Address</label>
+                  <div class="col-lg-8">
+                    <input type="text" class="form-control" id="inputEmail" placeholder="Address">
+                    <input type="text" class="form-control" id="inputEmail" placeholder="City">
+                    <input type="text" class="form-control" id="inputEmail" placeholder="State">
+                    <input type="text" class="form-control" id="inputEmail" placeholder="Zipcode">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail" class="col-lg-4 control-label">Contact No.</label>
+                <div class="col-lg-3">
+                  <input type="text" class="form-control" id="inputEmail" placeholder="777 777 7777">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-4">
+                  <button type="submit" class="btn btn-primary">Submit</button> 
+                  <button class="btn btn-default">Cancel</button> 
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

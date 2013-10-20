@@ -1,1 +1,36 @@
-<html></html>
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+      	<div class="page-header" id="banner">
+        	<div class="row">
+         		<div class="col-lg-6">
+            		<p class="lead">Select your bundle below:</p>
+          		</div>
+        	</div>
+      	</div>
+		<div class="col-lg-5">
+			<div class="list-group">
+				<a href="#" class="list-group-item active">Your bundle</a>
+				<a href="#" class="list-group-item">Chair<span class="badge">$39.99</span></a>
+				<a href="#" class="list-group-item">Table<span class="badge">$59.99</span></a>
+				<a href="#" class="list-group-item">Pen<span class="badge">$5.99</span></a>
+				<a href="#" class="list-group-item">Paper Stack<span class="badge">$19.99</span></a>
+				<a href="#" class="list-group-item">ATT Wireless<span class="badge">$29.99</span></a>
+				<a href="#" class="list-group-item active">Total: <strong>$145</strong>
+					<button type="button" class="btn btn-success btn-block">Order</button>
+						</a>
+			</div>
+		</div>
+		<div class="col-lg-3">
+			<div class="panel panel-info">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Compare to direct order</h3>
+			  </div>
+			  <div class="panel-body">
+			    Using Office Box saves you <strong>25%</strong> 
+			  </div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
