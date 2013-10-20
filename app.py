@@ -29,10 +29,12 @@ def customize():
 
 @app.route('/shipment', methods=['GET', 'POST'])
 def shipment():
-    print 'request.method', request.method
     if request.method == 'GET':
         return render_template('shipment.html')
     else:
+        id = request.form.get('id', 101)
+        params = {'id': id}
+        create_order(params)
         return redirect(url_for('thanks'))
 
 
