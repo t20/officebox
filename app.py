@@ -3,7 +3,7 @@ import os
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
-from tmforum import get_products, create_order
+from tmforum import get_product, create_order
 
 @app.route('/')
 def index():
@@ -12,12 +12,12 @@ def index():
 
 @app.route('/order', methods=['GET', 'POST'])
 def order():
+    id = request.form.get('id', 101)
+    params = {'id': id}
     if request.method == 'GET':
-        size = request.args.get('size', 'medium')
+        product = get_product(params)
         return render_template('order.html')
     # POST form submission
-    size = request.form.get('size', 'medium')
-    params = {'size': size}
     tmforum_response = create_order(params)
     return redirect(url_for('thanks'))
 
