@@ -10,10 +10,16 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/order')
+@app.route('/order', methods=['GET', 'POST'])
 def order():
-    size = request.args.get('size', 'medium')
-    return render_template('order.html')
+    if request.method == 'GET':
+        size = request.args.get('size', 'medium')
+        return render_template('order.html')
+    # POST form submission
+    size = request.form.get('size', 'medium')
+    params = {'size': size}
+    tmforum_response = create_order(params)
+    return redirect(url_for('thanks'))
 
 
 @app.route('/customize')
